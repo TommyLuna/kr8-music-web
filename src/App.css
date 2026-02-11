@@ -1,0 +1,152 @@
+/* App-specific styles */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(201, 168, 124, 0.3);
+  color: #F5F2EC;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 124, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 124, 0.5);
+}
+
+/* Navigation link underline effect */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C9A87C;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Section label styling */
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #C9A87C;
+}
+
+/* Card hover effects */
+.animate-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Image hover zoom */
+.section-image img {
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tag hover effect */
+.tag-hover {
+  transition: all 0.3s ease;
+}
+
+.tag-hover:hover {
+  border-color: #C9A87C;
+  color: #F5F2EC;
+  transform: translateY(-2px);
+}
+
+/* Bounce animation for scroll indicator */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Line expand animation */
+.line-expand {
+  transform-origin: left;
+  transition: width 0.4s ease;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #C9A87C 0%, #F5F2EC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(10, 10, 12, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section-image {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+  
+  .animate-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #C9A87C;
+  outline-offset: 2px;
+}

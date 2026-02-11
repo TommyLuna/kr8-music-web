@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --background-card: 240 4% 8%;
+    --foreground: 40 20% 95%;
+    --foreground-muted: 30 6% 60%;
+    --accent: 37 35% 63%;
+    --border: 40 10% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[rgba(245,242,236,0.1)];
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0A0A0C] text-[#F5F2EC] antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  
+  .section-label {
+    @apply text-xs font-mono tracking-[0.2em] uppercase text-[#C9A87C] mb-4;
+  }
+  
+  .card-premium {
+    @apply bg-[#141416] border border-[rgba(245,242,236,0.1)] p-8 rounded-sm;
+  }
+  
+  .card-premium:hover {
+    @apply border-[rgba(201,168,124,0.3)] transition-colors duration-300;
+  }
+  
+  .nav-link {
+    @apply text-sm font-mono tracking-wider uppercase text-[#9A9590] hover:text-[#F5F2EC] transition-colors;
+  }
+  
+  .text-muted {
+    @apply text-[#9A9590];
+  }
+  
+  .accent-text {
+    @apply text-[#C9A87C];
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
