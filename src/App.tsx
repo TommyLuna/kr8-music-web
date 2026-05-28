@@ -14,32 +14,32 @@ function App() {
       // Hero entrance animation
       const heroTl = gsap.timeline();
       heroTl
-        .fromTo('.hero-bg', 
-          { scale: 1.1, opacity: 0 }, 
+        .fromTo('.hero-bg',
+          { scale: 1.1, opacity: 0 },
           { scale: 1, opacity: 1, duration: 1.5, ease: 'power2.out' }
         )
-        .fromTo('.hero-content', 
-          { y: 60, opacity: 0 }, 
-          { y: 0, opacity: 1, duration: 1, ease: 'power2.out' }, 
+        .fromTo('.hero-content',
+          { y: 60, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: 'power2.out' },
           0.3
         )
-        .fromTo('.hero-line', 
-          { scaleX: 0 }, 
-          { scaleX: 1, duration: 0.8, ease: 'power2.out' }, 
+        .fromTo('.hero-line',
+          { scaleX: 0 },
+          { scaleX: 1, duration: 0.8, ease: 'power2.out' },
           0.6
         )
-        .fromTo('.hero-sub', 
-          { y: 20, opacity: 0 }, 
-          { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }, 
+        .fromTo('.hero-sub',
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
           0.8
         );
 
       // Section animations
       sectionsRef.current.forEach((section, index) => {
         if (!section) return;
-        
+
         const direction = index % 2 === 0 ? -50 : 50;
-        
+
         gsap.fromTo(section.querySelector('.section-image'),
           { x: direction, opacity: 0 },
           {
@@ -107,13 +107,13 @@ function App() {
       <nav className="fixed top-0 left-0 w-full z-50 px-8 lg:px-16 py-6 bg-[#0A0A0C]/80 backdrop-blur-md border-b border-[rgba(245,242,236,0.05)]">
         <div className="max-w-[1400px] mx-auto flex justify-between items-center">
           <div className="text-[#F5F2EC] text-2xl font-semibold tracking-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            KR8 Music 
+            nek.ai
           </div>
           <div className="hidden lg:flex gap-10">
             {['Home', 'About', 'Services', 'How It Works', 'Clients', 'Contact'].map((item, i) => (
-              <button 
-                key={item} 
-                onClick={() => scrollToSection(i)} 
+              <button
+                key={item}
+                onClick={() => scrollToSection(i)}
                 className="nav-link text-xs tracking-[0.15em]"
               >
                 {item}
@@ -126,33 +126,26 @@ function App() {
       {/* HERO */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="hero-bg absolute inset-0">
-          <img 
-            src="/images/dubai-skyline-night.jpg" 
-            alt="Dubai Skyline" 
+          <img
+            src="/images/dubai-skyline-night.jpg"
+            alt="Dubai Skyline"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0C]/70 via-[#0A0A0C]/50 to-[#0A0A0C]" />
         </div>
-        
+
         <div className="hero-content relative z-10 text-center px-8 max-w-4xl">
-          <h1 className="text-[clamp(52px,8vw,96px)] font-bold text-[#F5F2EC] tracking-tighter leading-none mb-8" 
+          <h1 className="text-[clamp(52px,8vw,96px)] font-bold text-[#F5F2EC] tracking-tighter leading-none mb-8"
               style={{ fontFamily: 'Montserrat, sans-serif' }}>
-        
+            Sound Intelligence.
           </h1>
           <div className="hero-line w-32 h-px bg-[#C9A87C] mx-auto mb-8 origin-center" />
           <p className="hero-sub text-[clamp(16px,2vw,22px)] text-[#F5F2EC] tracking-wide mb-4 font-light">
-            Curated Music Systems for Hotels & Premium Venues
+            AI-powered music systems for premium hospitality
           </p>
           <p className="text-xs font-mono tracking-[0.25em] uppercase text-[#9A9590]">
-            
+            Dubai · Middle East
           </p>
-          <p
-  className="mt-4 text-[clamp(24px,4vw,40px)] font-semibold tracking-tight text-[#F5F2EC]"
-  style={{ fontFamily: 'Montserrat, sans-serif' }}
->
-  KR8 Music 
-</p>
-
         </div>
 
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
@@ -176,26 +169,26 @@ function App() {
                   <span className="text-[#C9A87C]">No generic solutions.</span>
                 </p>
                 <p className="text-[#9A9590] leading-relaxed text-lg">
-                  KR8 Music designs and manages professional music systems for hotels and premium venues that understand music as a strategic part of their brand experience.
+                  nek.ai designs and deploys intelligent music systems for hotels and premium venues that understand music as a strategic part of their brand experience.
                 </p>
                 <p className="text-[#C9A87C] italic text-sm">
                   A solution designed for spaces where detail matters.
                 </p>
               </div>
             </div>
-            
+
             {/* Image Right */}
             <div className="section-image relative">
               <div className="aspect-[4/5] overflow-hidden">
-                <img 
-                  src="/images/dubai-luxury-pool.jpg" 
-                  alt="Luxury Space" 
+                <img
+                  src="/images/dubai-luxury-pool.jpg"
+                  alt="Luxury Space"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-[#141416] border border-[rgba(245,242,236,0.1)] p-6 max-w-xs">
                 <p className="text-sm text-[#9A9590]">
-                  KR8 Music is a complete ecosystem of musical curation and sound management.
+                  nek.ai is a complete ecosystem of intelligent musical curation and sound management.
                 </p>
               </div>
             </div>
@@ -216,10 +209,10 @@ function App() {
             <div className="animate-card group p-8 border border-[rgba(245,242,236,0.08)] hover:border-[#C9A87C]/30 transition-all duration-300 bg-[#0A0A0C]">
               <div className="w-12 h-px bg-[#C9A87C] mb-6 group-hover:w-20 transition-all duration-300" />
               <h3 className="text-lg font-medium text-[#F5F2EC] mb-4">
-                The KR8 Music Solution
+                The nek.ai Solution
               </h3>
               <p className="text-sm text-[#9A9590] leading-relaxed">
-                It's not about choosing songs, but designing a sound experience with professional criteria.
+                It's not about choosing songs, but designing an intelligent sound experience — built on years of professional expertise, powered by AI.
               </p>
             </div>
 
@@ -239,16 +232,16 @@ function App() {
         </div>
       </section>
 
-      {/* SECTION 2: WHAT IS KR8 MUSIC */}
+      {/* SECTION 2: WHAT IS NEK.AI */}
       <section ref={el => { sectionsRef.current[1] = el; }} className="min-h-screen py-24 flex items-center bg-[#0d0d0f]">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16 w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image Left */}
             <div className="section-image relative order-2 lg:order-1">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src="/images/bg-turntable.jpg" 
-                  alt="Turntable" 
+                <img
+                  src="/images/bg-turntable.jpg"
+                  alt="Turntable"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -259,11 +252,11 @@ function App() {
 
             {/* Text Right */}
             <div className="section-text order-1 lg:order-2">
-              <p className="section-label mb-6">What is KR8 Music?</p>
+              <p className="section-label mb-6">What is nek.ai?</p>
               <h2 className="text-[clamp(28px,3.5vw,44px)] font-light text-[#F5F2EC] leading-tight mb-8">
                 A professional music curation and sound management system
               </h2>
-              
+
               <div className="space-y-4 mb-8">
                 <p className="text-[#9A9590]">It's not a generic platform.</p>
                 <p className="text-[#9A9590]">It's not an automatic solution without criteria.</p>
@@ -276,12 +269,12 @@ function App() {
                   <p className="text-sm text-[#9A9590]">A tool capable of reinforcing brand identity and elevating the overall perception.</p>
                 </div>
                 <div className="animate-card border-l-2 border-[rgba(245,242,236,0.2)] pl-6 hover:border-[#C9A87C] transition-colors">
-                  <h4 className="text-[#F5F2EC] font-medium mb-2">A system designed to accompany day-to-day</h4>
-                  <p className="text-sm text-[#9A9590]">Musical structures adapted to the natural rhythm of each space.</p>
+                  <h4 className="text-[#F5F2EC] font-medium mb-2">AI that learns your space</h4>
+                  <p className="text-sm text-[#9A9590]">nek.ai combines 10+ years of professional DJ expertise with a proprietary AI engine. Sessions that evolve naturally with each space, automatically.</p>
                 </div>
                 <div className="animate-card border-l-2 border-[rgba(245,242,236,0.2)] pl-6 hover:border-[#C9A87C] transition-colors">
                   <h4 className="text-[#F5F2EC] font-medium mb-2">Professional curation as a foundation</h4>
-                  <p className="text-sm text-[#9A9590]">Nothing at KR8 Music is random. Content designed and supervised by professionals.</p>
+                  <p className="text-sm text-[#9A9590]">Nothing at nek.ai is random. Content designed and supervised by professionals.</p>
                 </div>
               </div>
             </div>
@@ -293,7 +286,7 @@ function App() {
       <section ref={el => { sectionsRef.current[2] = el; }} className="min-h-screen py-24 flex items-center">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16 w-full">
           <div className="text-center mb-16">
-            <p className="section-label mb-4">KR8 Music Services</p>
+            <p className="section-label mb-4">nek.ai Services</p>
             <h2 className="text-[clamp(32px,4vw,52px)] font-light text-[#F5F2EC]">
               A complete musical solution,<br />
               <span className="text-[#C9A87C]">not just a service</span>
@@ -310,9 +303,9 @@ function App() {
                 {[
                   'Professional musical curation aligned with space identity',
                   'Musical programming adapted to different moments',
-                  'Access to the KR8 Music platform',
+                  'Access to the nek.ai platform',
                   'Guided system management and control',
-                  'Intelligent automation options',
+                  'AI-powered automation',
                   'Periodic content updates',
                   'Dedicated Account Manager, based in Dubai'
                 ].map((item, i) => (
@@ -362,7 +355,7 @@ function App() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C9A87C] to-transparent" />
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-5xl font-light text-[#C9A87C]">01</span>
-                <h3 className="text-2xl font-light text-[#F5F2EC]">KR8 Music Online</h3>
+                <h3 className="text-2xl font-light text-[#F5F2EC]">nek.ai Online</h3>
               </div>
               <p className="text-[#9A9590] leading-relaxed mb-6">
                 Designed for spaces seeking a professional, agile, and easy-to-implement solution. Access to the curation system, guided management, intelligent automation, and continuous accompaniment.
@@ -381,7 +374,7 @@ function App() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9A9590] to-transparent" />
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-5xl font-light text-[#9A9590] group-hover:text-[#C9A87C] transition-colors">02</span>
-                <h3 className="text-2xl font-light text-[#F5F2EC]">KR8 Music Offline</h3>
+                <h3 className="text-2xl font-light text-[#F5F2EC]">nek.ai Offline</h3>
               </div>
               <p className="text-[#9A9590] leading-relaxed mb-6">
                 For spaces that need maximum reliability, autonomy, and control. Designed for environments where operational continuity is critical.
@@ -407,7 +400,7 @@ function App() {
                   Personalized sound immersion <span className="text-[#C9A87C]">(advanced option)</span>
                 </h4>
                 <p className="text-[#9A9590] leading-relaxed">
-                  A professional DJ from the KR8 Music team works directly in your space, integrating into its real dynamics. The goal: understand the venue's rhythm, observe audience behavior, and refine the sound identity from direct experience.
+                  A professional from the nek.ai team works directly in your space, integrating into its real dynamics. The goal: understand the venue's rhythm, observe audience behavior, and refine the sound identity from direct experience.
                 </p>
               </div>
             </div>
@@ -426,7 +419,7 @@ function App() {
                 We work with spaces where the standard is high
               </h2>
               <p className="text-[#9A9590] leading-relaxed text-lg mb-6">
-                KR8 Music works with spaces that understand experience as a whole and care for every detail of their identity.
+                nek.ai works with spaces that understand experience as a whole and care for every detail of their identity.
               </p>
               <p className="text-[#F5F2EC]">
                 Our clients share the same vision: <span className="text-[#C9A87C]">music is not a complement, it's an active part of the experience.</span>
@@ -436,9 +429,9 @@ function App() {
             {/* Image */}
             <div className="section-image">
               <div className="aspect-[16/10] overflow-hidden">
-                <img 
-                  src="/images/dubai-hotel-lobby.jpg" 
-                  alt="Hotel Lobby" 
+                <img
+                  src="/images/dubai-hotel-lobby.jpg"
+                  alt="Hotel Lobby"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -455,7 +448,7 @@ function App() {
                 'Lounges', 'Social spaces', 'Lobby areas',
                 'Spa', 'Pool areas', 'Transition zones'
               ].map((venue, i) => (
-                <span 
+                <span
                   key={i}
                   className="px-4 py-2 border border-[rgba(245,242,236,0.15)] text-[#9A9590] text-sm hover:border-[#C9A87C] hover:text-[#F5F2EC] transition-all cursor-default"
                 >
@@ -500,19 +493,19 @@ function App() {
                 Let's talk about<br />
                 <span className="text-[#C9A87C]">your space</span>
               </h2>
-              
+
               <p className="text-[#9A9590] leading-relaxed mb-12 max-w-md">
-                KR8 Music works with projects that understand music as a strategic part of the experience. The first step is a direct conversation.
+                nek.ai works with projects that understand music as a strategic part of the experience. The first step is a direct conversation.
               </p>
 
               <div className="space-y-8 mb-12">
                 <div className="group">
                   <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#9A9590] mb-2">Email</p>
-                  <a 
-                    href="mailto:info@kr8music.com" 
+                  <a
+                    href="mailto:hello@nek.ai"
                     className="text-2xl text-[#F5F2EC] hover:text-[#C9A87C] transition-colors"
                   >
-                    info@kr8music.com
+                    hello@nek.ai
                   </a>
                 </div>
 
@@ -524,8 +517,8 @@ function App() {
                 </div>
               </div>
 
-              <a 
-                href="mailto:info@kr8music.com?subject=Project%20Inquiry"
+              <a
+                href="mailto:hello@nek.ai?subject=Project%20Inquiry"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#C9A87C] text-[#0A0A0C] font-medium tracking-wider uppercase hover:bg-[#d4b48a] transition-colors"
               >
                 Start a conversation
@@ -536,9 +529,9 @@ function App() {
             {/* Image */}
             <div className="section-image relative">
               <div className="aspect-[4/5] overflow-hidden">
-                <img 
-                  src="/images/dubai-luxury-pool.jpg" 
-                  alt="Dubai Luxury" 
+                <img
+                  src="/images/dubai-luxury-pool.jpg"
+                  alt="Dubai Luxury"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -553,7 +546,7 @@ function App() {
           {/* Footer */}
           <div className="mt-24 pt-8 border-t border-[rgba(245,242,236,0.05)] flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#9A9590]">
-              © KR8 Music 2026
+              © nek.ai 2026
             </p>
             <div className="flex gap-6">
               <span className="text-xs text-[#9A9590]">Dubai</span>
